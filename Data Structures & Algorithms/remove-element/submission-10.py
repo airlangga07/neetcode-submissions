@@ -1,0 +1,17 @@
+class Solution:
+    def removeElement(self, nums: List[int], val: int) -> int:
+        new_array = []
+        tracker = 0
+
+        for i in nums:
+            if (i != val):
+                new_array.append(i)
+                tracker += 1
+            
+
+        for i in range(len(nums) - len(new_array)):
+            new_array.append(None)
+
+        nums = new_array
+        
+        return tracker
